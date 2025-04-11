@@ -1,0 +1,142 @@
+/**
+ * The Question class represents a question submitted by a user,
+ * along with metadata such as topic, author, and review status.
+ */
+package application;
+
+public class Question {
+    
+    /**
+     * Unique ID of the question.
+     */
+    private int id;
+
+    /**
+     * The content/text of the question.
+     */
+    private String content;
+
+    /**
+     * The topic/category under which the question falls.
+     */
+    private String topic;
+
+    /**
+     * The username of the person who submitted the question.
+     */
+    private String submittedBy;
+
+    /**
+     * Flag indicating whether the question has been reviewed by staff.
+     */
+    private boolean reviewed = false;
+
+    /**
+     * Comment left by staff after reviewing the question.
+     */
+    private String staffComment = "";
+
+    /**
+     * Constructs a new Question.
+     *
+     * @param id          the unique identifier
+     * @param content     the text of the question
+     * @param topic       the topic/category of the question
+     * @param submittedBy the username of the submitter
+     */
+    public Question(int id, String content, String topic, String submittedBy) {
+        this.id = id;
+        this.content = content;
+        this.topic = topic;
+        this.submittedBy = submittedBy;
+    }
+
+    /**
+     * Gets the question ID.
+     *
+     * @return the question ID
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Gets the question content.
+     *
+     * @return the content of the question
+     */
+    public String getContent() {
+        return content;
+    }
+
+    /**
+     * Gets the question topic.
+     *
+     * @return the topic of the question
+     */
+    public String getTopic() {
+        return topic;
+    }
+
+    /**
+     * Gets the username of the person who submitted the question.
+     *
+     * @return the submitter's username
+     */
+    public String getSubmittedBy() {
+        return submittedBy;
+    }
+
+    /**
+     * Returns whether the question has been reviewed.
+     *
+     * @return true if reviewed, false otherwise
+     */
+    public boolean isReviewed() {
+        return reviewed;
+    }
+
+    /**
+     * Sets the reviewed status of the question.
+     *
+     * @param reviewed the new reviewed status
+     */
+    public void setReviewed(boolean reviewed) {
+        this.reviewed = reviewed;
+    }
+
+    /**
+     * Gets the staff comment on the question.
+     *
+     * @return the staff comment
+     */
+    public String getStaffComment() {
+        return staffComment;
+    }
+
+    /**
+     * Sets the staff comment on the question.
+     *
+     * @param staffComment the staff comment to set
+     */
+    public void setStaffComment(String staffComment) {
+        this.staffComment = staffComment;
+    }
+
+    /**
+     * Returns a string representation of the question.
+     *
+     * @return formatted string with question details
+     */
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", topic='" + topic + '\'' +
+                ", submittedBy='" + submittedBy + '\'' +
+                ", reviewed=" + reviewed +
+                ", staffComment='" + staffComment + '\'' +
+                '}';
+    }
+}
